@@ -1,0 +1,25 @@
+# src/main/resources/application-dev.yml
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+logging:
+  level:
+    root: INFO
+    com.example.payment: DEBUG
+
+payment:
+  processors:
+    paypal:
+      enabled: true
+      sandbox: true
+    stripe:
+      enabled: true
+      test-mode: true
+    mercadopago:
+      enabled: true
+      sandbox: true
+    pse:
+      enabled: true
+      test-mode: true
